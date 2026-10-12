@@ -1,0 +1,1048 @@
+/* =====================================================
+   LIFEOS AI - MAIN CSS
+   ===================================================== */
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0c0818;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    height: 75px;
+
+    padding: 0 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #29223d;
+
+    background: #0d091b;
+
+}
+
+
+/* Logo */
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+}
+
+
+.logo span {
+
+    color: #ff6b9d;
+
+}
+
+
+/* Navigation */
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+}
+
+
+.navbar nav a {
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.navbar nav a:hover {
+
+    color: #ff6b9d;
+
+}
+
+
+.navbar nav a.active {
+
+    color: #ff6b9d;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: calc(100vh - 75px);
+
+    padding: 70px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+}
+
+
+/* Hero Left */
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+/* Small heading */
+
+.small-title {
+
+    color: #ff6b9d;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Main heading */
+
+.hero h1 {
+
+    font-size: 60px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #6c5ce7;
+
+}
+
+
+/* Hero paragraph */
+
+.hero-text {
+
+    color: #b6afc7;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 620px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ================= BUTTON ================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+.primary-button {
+
+    display: inline-block;
+
+    padding: 15px 27px;
+
+    background: #6c5ce7;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-2px);
+
+    background: #7a6aed;
+
+}
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+
+    width: 380px;
+
+    padding: 25px;
+
+    background: #171229;
+
+    border: 1px solid #332b4d;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* Card Header */
+
+.card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #c2bbd2;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.status-dot {
+
+    color: #ff6b9d;
+
+}
+
+
+/* Greeting */
+
+.hero-card h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* Tasks */
+
+.task {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #211a38;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+}
+
+
+.task span:last-child {
+
+    color: #ff6b9d;
+
+}
+
+
+/* =====================================================
+   FEATURES PAGE
+   ===================================================== */
+
+.features-page {
+
+    min-height: calc(100vh - 75px);
+
+    padding: 65px 8%;
+
+}
+
+
+/* Heading */
+
+.features-heading {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.features-heading h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.features-heading > p:last-child {
+
+    color: #aaa3b9;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* Feature Grid */
+
+.feature-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* Feature Card */
+
+.feature-card {
+
+    min-height: 220px;
+
+    padding: 25px;
+
+    background: #171229;
+
+    border: 1px solid #2d2643;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #6c5ce7;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* Feature Icon */
+
+.feature-card .icon {
+
+    font-size: 32px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Feature title */
+
+.feature-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Feature paragraph */
+
+.feature-card p {
+
+    color: #aaa3b9;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   PROFILE PAGE
+   ===================================================== */
+
+.profile-page {
+
+    min-height: calc(100vh - 75px);
+
+    padding: 65px 20px;
+
+}
+
+
+/* Profile Heading */
+
+.profile-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.profile-heading h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.profile-heading > p:last-child {
+
+    color: #aaa3b9;
+
+    font-size: 17px;
+
+}
+
+
+/* Profile Card */
+
+.profile-card {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: #171229;
+
+    border: 1px solid #302847;
+
+    border-radius: 18px;
+
+}
+
+
+/* Avatar */
+
+.profile-avatar {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #211a38;
+
+    font-size: 35px;
+
+}
+
+
+.profile-card h2 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Profile Field */
+
+.profile-field {
+
+    margin-bottom: 20px;
+
+}
+
+
+.profile-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d5cfe2;
+
+    font-size: 14px;
+
+}
+
+
+.profile-field input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #0f0b1e;
+
+    border: 1px solid #352d4c;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+.profile-field input:focus {
+
+    border-color: #6c5ce7;
+
+}
+
+
+/* Profile button */
+
+.profile-button {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid #29223d;
+
+    background: #0d091b;
+
+}
+
+
+footer p {
+
+    color: #817991;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .hero {
+
+        padding: 60px 6%;
+
+        gap: 40px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero-card {
+
+        width: 340px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 0 5%;
+
+    }
+
+
+    .navbar nav {
+
+        gap: 15px;
+
+    }
+
+
+    .navbar nav a {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 50px 6%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .hero-card {
+
+        width: 100%;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .features-heading h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .profile-heading h1 {
+
+        font-size: 36px;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .navbar nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .hero {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .features-page {
+
+        padding: 45px 20px;
+
+    }
+
+
+    .profile-card {
+
+        padding: 25px;
+
+    }
+
+}
+/* =====================================================
+   REGISTER / LOGIN AUTH PAGE
+   ===================================================== */
+
+.auth-page {
+
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+}
+
+
+/* ================= AUTH CARD ================= */
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 460px;
+
+    padding: 40px;
+
+    background: #171229;
+
+    border: 1px solid #302847;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* ================= ICON ================= */
+
+.auth-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #211a38;
+
+    font-size: 28px;
+
+}
+
+
+/* ================= AUTH HEADING ================= */
+
+.auth-card .small-title {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+.auth-card h1 {
+
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.auth-subtitle {
+
+    text-align: center;
+
+    color: #aaa3b9;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    color: #d8d2e3;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #0f0b1e;
+
+    border: 1px solid #352d4c;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+.form-group input::placeholder {
+
+    color: #777083;
+
+}
+
+
+.form-group input:focus {
+
+    border-color: #6c5ce7;
+
+}
+
+
+/* ================= AUTH BUTTON ================= */
+
+.auth-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #6c5ce7;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.auth-button:hover {
+
+    background: #7a6aed;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ================= AUTH FOOTER ================= */
+
+.auth-footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #aaa3b9;
+
+    font-size: 14px;
+
+}
+
+
+.auth-footer a {
+
+    color: #ff6b9d;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.auth-footer a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .auth-card {
+
+        padding: 28px 22px;
+
+    }
+
+
+    .auth-card h1 {
+
+        font-size: 30px;
+
+    }
+
+}

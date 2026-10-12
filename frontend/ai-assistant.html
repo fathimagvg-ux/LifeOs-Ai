@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+<title>
+    AI Assistant - LifeOS AI
+</title>
+
+<link
+    rel="stylesheet"
+    href="css/ai-assistant.css"
+>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="logo">
+    LifeOS <span>AI</span>
+</div>
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="features.html">
+        Features
+    </a>
+
+    <a href="dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="profile.html">
+        Profile
+    </a>
+
+</nav>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<main class="assistant-container">
+
+<!-- ================= HEADER ================= -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="small-title">
+            LIFEOS AI
+        </p>
+
+        <h1>
+            AI Assistant 🤖
+        </h1>
+
+        <p>
+            Your personal Life Simulator & Insight Engine.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AI MODES ================= -->
+
+<section class="ai-modes">
+
+    <button
+        class="ai-mode active"
+        data-mode="WHAT-IF"
+        type="button"
+    >
+
+        <span>
+            🔮
+        </span>
+
+        <strong>
+            What-If
+        </strong>
+
+        <small>
+            Simulate a situation
+        </small>
+
+    </button>
+
+
+    <button
+        class="ai-mode"
+        data-mode="WHY"
+        type="button"
+    >
+
+        <span>
+            🔍
+        </span>
+
+        <strong>
+            Why?
+        </strong>
+
+        <small>
+            Understand patterns
+        </small>
+
+    </button>
+
+
+    <button
+        class="ai-mode"
+        data-mode="WHAT-NEXT"
+        type="button"
+    >
+
+        <span>
+            🧭
+        </span>
+
+        <strong>
+            What Next?
+        </strong>
+
+        <small>
+            Explore next steps
+        </small>
+
+    </button>
+
+</section>
+
+
+<!-- ================= AI CHAT BOX ================= -->
+
+<section class="chat-container">
+
+
+    <!-- CHAT HEADER -->
+
+    <div class="chat-header">
+
+        <div class="ai-icon">
+            🤖
+        </div>
+
+        <div>
+
+            <h2>
+                LifeOS AI Assistant
+            </h2>
+
+            <p id="modeDescription">
+                Simulate a possible life situation.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHAT MESSAGES -->
+
+    <div
+        class="chat-messages"
+        id="chatMessages"
+    >
+
+        <div class="message ai-message">
+
+            <div class="message-icon">
+                🤖
+            </div>
+
+            <div class="message-content">
+
+                <p>
+                    Hello! 👋 I'm your LifeOS AI Assistant.
+                </p>
+
+                <p>
+                    I can simulate situations, analyse
+                    your recorded LifeOS patterns and
+                    help you explore what you could
+                    consider next.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INPUT AREA -->
+
+    <div class="chat-input-area">
+
+        <input
+            type="text"
+            id="userMessage"
+            placeholder="Ask LifeOS something..."
+            autocomplete="off"
+        >
+
+        <button
+            type="button"
+            id="sendButton"
+        >
+
+            ✨ Ask
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK ACTIONS ================= -->
+
+<section class="quick-section">
+
+    <h2>
+        Explore LifeOS
+    </h2>
+
+    <div class="quick-grid">
+
+
+        <button
+            type="button"
+            class="quick-button"
+            data-mode="WHAT-IF"
+            data-question="What if I postpone my pending reminders?"
+        >
+
+            🔮
+
+            <span>
+                What if I postpone my reminders?
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="quick-button"
+            data-mode="WHY"
+            data-question="Why do I have pending items?"
+        >
+
+            🔍
+
+            <span>
+                Why do I have pending items?
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="quick-button"
+            data-mode="WHAT-NEXT"
+            data-question="What should I focus on today?"
+        >
+
+            🧭
+
+            <span>
+                What should I focus on today?
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="quick-button"
+            data-mode="WHAT-IF"
+            data-question="What if I spend less this month?"
+        >
+
+            💰
+
+            <span>
+                What if I spend less this month?
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AI INSIGHT ================= -->
+
+<section class="ai-insight">
+
+    <div class="insight-icon">
+        ✨
+    </div>
+
+    <div>
+
+        <h3>
+            LifeOS AI Insight
+        </h3>
+
+        <p id="insightText">
+            Choose a mode and ask LifeOS a question
+            based on your personal LifeOS data.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+    © 2026 LifeOS AI.
+    Your Personal Life Operating System.
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* ================================================= */
+    /* ================= LOGIN CHECK ==================== */
+    /* ================================================= */
+
+    const token =
+        localStorage.getItem("lifeosToken");
+
+
+    if (!token) {
+
+        alert("Please login first.");
+
+        window.location.href =
+            "login.html";
+
+    }
+
+
+    /* ================================================= */
+    /* ================= ELEMENTS ======================= */
+    /* ================================================= */
+
+    const input =
+        document.getElementById(
+            "userMessage"
+        );
+
+
+    const sendButton =
+        document.getElementById(
+            "sendButton"
+        );
+
+
+    const chatMessages =
+        document.getElementById(
+            "chatMessages"
+        );
+
+
+    const modeDescription =
+        document.getElementById(
+            "modeDescription"
+        );
+
+
+    const insightText =
+        document.getElementById(
+            "insightText"
+        );
+
+
+    const modeButtons =
+        document.querySelectorAll(
+            ".ai-mode"
+        );
+
+
+    const quickButtons =
+        document.querySelectorAll(
+            ".quick-button"
+        );
+
+
+    /* ================================================= */
+    /* ================= CURRENT MODE =================== */
+    /* ================================================= */
+
+    let currentMode =
+        "WHAT-IF";
+
+
+    /* ================================================= */
+    /* ================= MODE BUTTONS ================== */
+    /* ================================================= */
+
+    modeButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    modeButtons.forEach(
+                        function (item) {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    currentMode =
+                        button.dataset.mode;
+
+
+                    updateModeDescription();
+
+                }
+            );
+
+        }
+    );
+
+
+    /* ================================================= */
+    /* ================= MODE DESCRIPTION ============== */
+    /* ================================================= */
+
+    function updateModeDescription() {
+
+        if (
+            currentMode ===
+            "WHAT-IF"
+        ) {
+
+            modeDescription.textContent =
+                "Simulate a possible life situation.";
+
+            insightText.textContent =
+                "Ask a hypothetical question and LifeOS will explore its possible impact using your recorded data.";
+
+        }
+
+        else if (
+            currentMode ===
+            "WHY"
+        ) {
+
+            modeDescription.textContent =
+                "Understand patterns in your LifeOS data.";
+
+            insightText.textContent =
+                "Ask why something is happening and LifeOS will analyse the recorded information.";
+
+        }
+
+        else {
+
+            modeDescription.textContent =
+                "Explore useful next steps.";
+
+            insightText.textContent =
+                "Ask what you could consider next based on your current LifeOS context.";
+
+        }
+
+    }
+
+
+    /* ================================================= */
+    /* ================= SEND MESSAGE ================== */
+    /* ================================================= */
+
+    async function sendMessage() {
+
+        const message =
+            input.value.trim();
+
+
+        if (
+            message === ""
+        ) {
+
+            return;
+
+        }
+
+
+        /* ================= USER MESSAGE ================= */
+
+        addUserMessage(
+            message
+        );
+
+
+        input.value =
+            "";
+
+
+        sendButton.disabled =
+            true;
+
+
+        sendButton.textContent =
+            "Thinking...";
+
+
+        /* ================= LOADING ================= */
+
+        const loadingMessage =
+            addAIMessage(
+                "I'm analysing your LifeOS data..."
+            );
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "http://localhost:5000/api/ai-assistant",
+                    {
+
+                        method:
+                            "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "Authorization":
+                                "Bearer " +
+                                token
+
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                question:
+                                    message,
+
+                                mode:
+                                    currentMode
+
+                            })
+
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            loadingMessage.remove();
+
+
+            if (
+                !response.ok
+            ) {
+
+                addAIMessage(
+                    data.message ||
+                    "Sorry, I couldn't process your request."
+                );
+
+                return;
+
+            }
+
+
+            /* ================================================= */
+            /* IMPORTANT: BACKEND RETURNS data.aiMessage        */
+            /* ================================================= */
+
+            addAIMessage(
+                data.aiMessage ||
+                "LifeOS AI did not return an answer."
+            );
+
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "AI ASSISTANT ERROR:",
+                error
+            );
+
+
+            loadingMessage.remove();
+
+
+            addAIMessage(
+                "Unable to connect to LifeOS AI. Please make sure the backend and Ollama are running."
+            );
+
+        }
+
+
+        sendButton.disabled =
+            false;
+
+
+        sendButton.textContent =
+            "✨ Ask";
+
+    }
+
+
+    /* ================================================= */
+    /* ================= USER MESSAGE ================== */
+    /* ================================================= */
+
+    function addUserMessage(
+        message
+    ) {
+
+        const messageDiv =
+            document.createElement(
+                "div"
+            );
+
+
+        messageDiv.className =
+            "message user-message";
+
+
+        const content =
+            document.createElement(
+                "div"
+            );
+
+
+        content.className =
+            "message-content";
+
+
+        const paragraph =
+            document.createElement(
+                "p"
+            );
+
+
+        paragraph.textContent =
+            message;
+
+
+        content.appendChild(
+            paragraph
+        );
+
+
+        messageDiv.appendChild(
+            content
+        );
+
+
+        chatMessages.appendChild(
+            messageDiv
+        );
+
+
+        scrollChat();
+
+    }
+
+
+    /* ================================================= */
+    /* ================= AI MESSAGE ==================== */
+    /* ================================================= */
+
+    function addAIMessage(
+        message
+    ) {
+
+        const messageDiv =
+            document.createElement(
+                "div"
+            );
+
+
+        messageDiv.className =
+            "message ai-message";
+
+
+        const icon =
+            document.createElement(
+                "div"
+            );
+
+
+        icon.className =
+            "message-icon";
+
+
+        icon.textContent =
+            "🤖";
+
+
+        const content =
+            document.createElement(
+                "div"
+            );
+
+
+        content.className =
+            "message-content";
+
+
+        const paragraph =
+            document.createElement(
+                "p"
+            );
+
+
+        paragraph.textContent =
+            message;
+
+
+        content.appendChild(
+            paragraph
+        );
+
+
+        messageDiv.appendChild(
+            icon
+        );
+
+
+        messageDiv.appendChild(
+            content
+        );
+
+
+        chatMessages.appendChild(
+            messageDiv
+        );
+
+
+        scrollChat();
+
+
+        return messageDiv;
+
+    }
+
+
+    /* ================================================= */
+    /* ================= QUICK ACTIONS ================= */
+    /* ================================================= */
+
+    quickButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const question =
+                        button.dataset.question;
+
+
+                    const mode =
+                        button.dataset.mode;
+
+
+                    currentMode =
+                        mode;
+
+
+                    modeButtons.forEach(
+                        function (item) {
+
+                            item.classList.toggle(
+                                "active",
+                                item.dataset.mode ===
+                                mode
+                            );
+
+                        }
+                    );
+
+
+                    updateModeDescription();
+
+
+                    input.value =
+                        question;
+
+
+                    sendMessage();
+
+                }
+            );
+
+        }
+    );
+
+
+    /* ================================================= */
+    /* ================= ENTER KEY ====================== */
+    /* ================================================= */
+
+    input.addEventListener(
+        "keypress",
+        function (event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                event.preventDefault();
+
+                sendMessage();
+
+            }
+
+        }
+    );
+
+
+    /* ================================================= */
+    /* ================= SCROLL ========================= */
+    /* ================================================= */
+
+    function scrollChat() {
+
+        chatMessages.scrollTop =
+            chatMessages.scrollHeight;
+
+    }
+
+</script>
+
+</body>
+
+</html>

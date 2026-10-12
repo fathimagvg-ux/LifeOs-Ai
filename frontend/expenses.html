@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+<title>Expenses & Bills - LifeOS AI</title>
+
+<link rel="stylesheet" href="css/expenses.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="logo">
+    LifeOS <span>AI</span>
+</div>
+
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="features.html">Features</a>
+
+    <a href="dashboard.html">Dashboard</a>
+
+    <a href="profile.html">Profile</a>
+
+</nav>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<main class="expenses-container">
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="page-header">
+
+    <p class="small-title">
+        LIFEOS AI
+    </p>
+
+    <h1>
+        Expenses & Bills 💰
+    </h1>
+
+    <p class="description">
+        Track your expenses, bills and understand your spending.
+    </p>
+
+</section>
+
+
+
+<!-- ================= SUMMARY ================= -->
+
+<section class="summary-grid">
+
+
+    <div class="summary-card">
+
+        <span>
+            MONTHLY EXPENSES
+        </span>
+
+        <h2>
+            ₹0
+        </h2>
+
+        <p>
+            Total spending this month
+        </p>
+
+    </div>
+
+
+
+    <div class="summary-card">
+
+        <span>
+            UPCOMING BILLS
+        </span>
+
+        <h2>
+            ₹0
+        </h2>
+
+        <p>
+            Bills to be paid
+        </p>
+
+    </div>
+
+
+
+    <div class="summary-card">
+
+        <span>
+            SUBSCRIPTIONS
+        </span>
+
+        <h2>
+            ₹0
+        </h2>
+
+        <p>
+            Monthly subscriptions
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= ADD EXPENSE ================= -->
+
+<section class="expense-panel">
+
+    <div class="panel-title">
+
+        <h2>
+            Add Expense
+        </h2>
+
+        <p>
+            Add your daily expenses and bills.
+        </p>
+
+    </div>
+
+
+    <form id="expenseForm">
+
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="expenseName">
+                    Expense Name
+                </label>
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Eg: Electricity Bill"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="expenseCategory">
+                    Category
+                </label>
+
+                <select id="expenseCategory">
+
+                    <option value="Bill">
+                        💰 Bill
+                    </option>
+
+                    <option value="Food">
+                        🍔 Food
+                    </option>
+
+                    <option value="Travel">
+                        🚗 Travel
+                    </option>
+
+                    <option value="Shopping">
+                        🛍️ Shopping
+                    </option>
+
+                    <option value="Medicine">
+                        💊 Medicine
+                    </option>
+
+                    <option value="Subscription">
+                        📱 Subscription
+                    </option>
+
+                    <option value="Other">
+                        📌 Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="expenseAmount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Eg: 1500"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="expenseDate">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="expenseDate"
+                    required
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            type="submit"
+            class="add-button">
+
+            + Add Expense
+
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= EXPENSE LIST ================= -->
+
+<section class="expenses-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="small-title">
+                YOUR EXPENSES
+            </p>
+
+            <h2>
+                Recent Expenses
+            </h2>
+
+        </div>
+
+        <span id="expenseCount">
+            0 Expenses
+        </span>
+
+    </div>
+
+
+    <!-- Expenses will be loaded from MongoDB here -->
+
+
+</section>
+
+
+
+<!-- ================= AI INSIGHT ================= -->
+
+<section class="ai-box">
+
+    <div class="ai-icon">
+        🧠
+    </div>
+
+    <div>
+
+        <p class="small-title">
+            AI EXPENSE INSIGHT
+        </p>
+
+        <h2>
+            Your spending is under control
+        </h2>
+
+        <p>
+            Your expenses are currently within your
+            monthly spending pattern.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+    © 2026 LifeOS AI. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/expenses.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Life Score - LifeOS AI</title>
+
+<link rel="stylesheet" href="css/life-score.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        LifeOS <span>AI</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="features.html">
+            Features
+        </a>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+    <p class="small-title">
+        LIFEOS AI
+    </p>
+
+    <h1 class="page-title">
+        Life Score 📊
+    </h1>
+
+    <p class="description">
+        Understand how well you are managing your everyday life.
+    </p>
+
+
+
+    <!-- ================= SCORE CARD ================= -->
+
+    <section class="score-card">
+
+        <div class="score-circle">
+
+            <span class="score-number"
+                  id="lifeScore">
+                0
+            </span>
+
+            <span class="score-total">
+                / 100
+            </span>
+
+        </div>
+
+
+        <div class="score-status"
+             id="scoreStatus">
+            Loading...
+        </div>
+
+        <p class="score-message">
+            Calculating your Life Score...
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= LIFE AREAS ================= -->
+
+    <section class="areas">
+
+
+        <!-- DOCUMENTS -->
+
+        <div class="area-card">
+
+            <div class="area-top">
+
+                <span class="area-name">
+                    📄 Documents
+                </span>
+
+                <span class="area-score">
+                    95%
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     style="width: 95%;">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BILLS -->
+
+        <div class="area-card">
+
+            <div class="area-top">
+
+                <span class="area-name">
+                    💰 Bills
+                </span>
+
+                <span class="area-score">
+                    100%
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     style="width: 100%;">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MEDICINE -->
+
+        <div class="area-card">
+
+            <div class="area-top">
+
+                <span class="area-name">
+                    💊 Medicine
+                </span>
+
+                <span class="area-score">
+                    90%
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     style="width: 90%;">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REMINDERS -->
+
+        <div class="area-card">
+
+            <div class="area-top">
+
+                <span class="area-name">
+                    🔔 Reminders
+                </span>
+
+                <span class="area-score"
+                      id="reminderScore">
+                    0%
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     id="reminderProgress">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= AI INSIGHT ================= -->
+
+    <section class="ai-box">
+
+        <div class="ai-icon">
+            🧠
+        </div>
+
+        <div>
+
+            <p class="small-title">
+                AI LIFE INSIGHT
+            </p>
+
+            <h2>
+                You're doing great!
+            </h2>
+
+            <p class="ai-insight-text">
+                Your Life Score is calculated using your
+                reminder activity.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 LifeOS AI. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- LIFE SCORE JAVASCRIPT -->
+
+<script src="js/life-score.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<!-- ================= BASIC SETTINGS ================= -->
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+<!-- ================= PAGE TITLE ================= -->
+
+<title>Health & Medicine - LifeOS AI</title>
+
+<!-- ================= MEDICINE CSS ================= -->
+
+<link rel="stylesheet" href="css/medicine.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="logo">
+    LifeOS <span>AI</span>
+</div>
+
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="features.html">
+        Features
+    </a>
+
+    <a href="dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="profile.html">
+        Profile
+    </a>
+
+</nav>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<main class="medicine-container">
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="page-header">
+
+    <p class="small-title">
+        LIFEOS AI
+    </p>
+
+    <h1>
+        Health & Medicine 💊
+    </h1>
+
+    <p class="description">
+        Track your medicines and never forget your schedule.
+    </p>
+
+</section>
+
+
+
+<!-- ================= HEALTH SUMMARY ================= -->
+
+<section class="health-summary">
+
+
+    <div class="health-card">
+
+        <span>
+            TODAY'S MEDICINES
+        </span>
+
+        <h2 id="todayMedicineCount">
+            0
+        </h2>
+
+        <p>
+            Medicines scheduled today
+        </p>
+
+    </div>
+
+
+
+    <div class="health-card">
+
+        <span>
+            TAKEN
+        </span>
+
+        <h2 id="takenMedicineCount">
+            0
+        </h2>
+
+        <p>
+            Medicines taken today
+        </p>
+
+    </div>
+
+
+
+    <div class="health-card">
+
+        <span>
+            MISSED
+        </span>
+
+        <h2 id="missedMedicineCount">
+            0
+        </h2>
+
+        <p>
+            Medicine pending
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= ADD MEDICINE ================= -->
+
+<section class="medicine-panel">
+
+
+    <div class="panel-title">
+
+        <h2>
+            Add Medicine
+        </h2>
+
+        <p>
+            Add your medicine and schedule.
+        </p>
+
+    </div>
+
+
+
+    <form id="medicineForm">
+
+
+        <!-- ================= MEDICINE NAME + DOSAGE ================= -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="medicineName">
+                    Medicine Name
+                </label>
+
+                <input
+                    type="text"
+                    id="medicineName"
+                    placeholder="Eg: Vitamin Tablet"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="medicineDose">
+                    Dosage
+                </label>
+
+                <input
+                    type="text"
+                    id="medicineDose"
+                    placeholder="Eg: 1 tablet"
+                    required
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= TIME + FREQUENCY ================= -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="medicineTime">
+                    Time
+                </label>
+
+                <input
+                    type="time"
+                    id="medicineTime"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="medicineFrequency">
+                    Frequency
+                </label>
+
+                <select
+                    id="medicineFrequency"
+                    required
+                >
+
+                    <option value="Daily">
+                        Daily
+                    </option>
+
+                    <option value="Weekly">
+                        Weekly
+                    </option>
+
+                    <option value="As Needed">
+                        As Needed
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= START DATE + END DATE ================= -->
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="medicineStartDate">
+                    Start Date
+                </label>
+
+                <input
+                    type="date"
+                    id="medicineStartDate"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="medicineEndDate">
+                    End Date
+                </label>
+
+                <input
+                    type="date"
+                    id="medicineEndDate"
+                    required
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= ADD BUTTON ================= -->
+
+        <button
+            type="submit"
+            class="add-button"
+        >
+
+            + Add Medicine
+
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= TODAY'S MEDICINES ================= -->
+
+<section class="medicine-section">
+
+
+    <div class="section-heading">
+
+
+        <div>
+
+            <p class="small-title">
+                TODAY
+            </p>
+
+            <h2>
+                Medicine Schedule
+            </h2>
+
+        </div>
+
+
+        <span id="medicineCount">
+            0 Medicines
+        </span>
+
+
+    </div>
+
+
+
+    <!-- ================= DYNAMIC MEDICINE LIST ================= -->
+
+    <div id="medicineList">
+
+        <!-- Medicines will be loaded from MongoDB -->
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ====================================================== -->
+<!-- ================= VOICE ASSISTANT ==================== -->
+<!-- ====================================================== -->
+
+<section class="voice-assistant-section">
+
+
+    <!-- ================= VOICE HEADER ================= -->
+
+    <div class="voice-header">
+
+
+        <div class="voice-icon">
+            🎤
+        </div>
+
+
+        <div>
+
+            <p class="small-title">
+                LIFEOS AI
+            </p>
+
+            <h2>
+                Voice Assistant
+            </h2>
+
+            <p class="voice-description">
+                Ask LifeOS about your medicines using your voice.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= VOICE BUTTON ================= -->
+
+    <button
+        type="button"
+        id="voiceButton"
+        class="voice-button"
+    >
+
+        🎤 Ask LifeOS
+
+    </button>
+
+
+
+    <!-- ================= VOICE STATUS ================= -->
+
+    <p
+        id="voiceStatus"
+        class="voice-status"
+    >
+
+        Click the button and start speaking...
+
+    </p>
+
+
+
+    <!-- ================= VOICE RESPONSE ================= -->
+
+    <div
+        id="voiceResponse"
+        class="voice-response"
+    >
+
+
+        <div class="assistant-icon">
+            🤖
+        </div>
+
+
+        <div>
+
+            <p class="response-label">
+                LifeOS AI
+            </p>
+
+            <p
+                id="voiceAnswer"
+                class="voice-answer"
+            >
+
+                Your voice assistant response
+                will appear here.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= VOICE EXAMPLES ================= -->
+
+    <div class="voice-examples">
+
+
+        <p>
+            Try asking:
+        </p>
+
+
+        <div class="example-list">
+
+
+            <button
+                type="button"
+                class="voice-example"
+            >
+                What medicines do I have?
+            </button>
+
+
+            <button
+                type="button"
+                class="voice-example"
+            >
+                What is my next medicine?
+            </button>
+
+
+            <button
+                type="button"
+                class="voice-example"
+            >
+                Which medicines are pending?
+            </button>
+
+
+            <button
+                type="button"
+                class="voice-example"
+            >
+                What medicines are scheduled today?
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= AI HEALTH INSIGHT ================= -->
+
+<section class="ai-box">
+
+
+    <div class="ai-icon">
+        🧠
+    </div>
+
+
+    <div>
+
+
+        <p class="small-title">
+            AI HEALTH INSIGHT
+        </p>
+
+
+        <h2 id="aiHealthTitle">
+            Keep your medicine schedule consistent
+        </h2>
+
+
+        <p id="aiHealthMessage">
+            Add your medicines to start tracking your
+            daily medicine routine.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+    © 2026 LifeOS AI. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/medicine.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Document Vault - LifeOS AI</title>
+
+<link rel="stylesheet"
+      href="css/document-vault.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        LifeOS <span>AI</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="document-page">
+
+    <!-- Heading -->
+
+    <section class="page-heading">
+
+        <p class="small-title">
+            LIFEOS AI
+        </p>
+
+        <h1>
+            Smart Document Vault
+        </h1>
+
+        <p>
+            Store and manage your important documents
+            in one secure place.
+        </p>
+
+    </section>
+
+
+    <!-- ================= ADD DOCUMENT ================= -->
+
+    <section class="add-document-card">
+
+        <h2>
+            📁 Add New Document
+        </h2>
+
+        <p class="card-description">
+            Add your important document details below.
+        </p>
+
+
+        <form id="documentForm">
+
+            <div class="form-group">
+
+                <label for="documentName">
+                    Document Name
+                </label>
+
+                <input
+                    type="text"
+                    id="documentName"
+                    placeholder="Example: Aadhaar Card"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="documentCategory">
+                    Category
+                </label>
+
+                <select id="documentCategory" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Identity">
+                        Identity
+                    </option>
+
+                    <option value="Education">
+                        Education
+                    </option>
+
+                    <option value="Vehicle">
+                        Vehicle
+                    </option>
+
+                    <option value="Insurance">
+                        Insurance
+                    </option>
+
+                    <option value="Financial">
+                        Financial
+                    </option>
+
+                    <option value="Medical">
+                        Medical
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="documentExpiry">
+                    Expiry Date
+                </label>
+
+                <input
+                    type="date"
+                    id="documentExpiry"
+                    required>
+
+            </div>
+
+
+            <!-- ================= UPLOAD DOCUMENT ================= -->
+
+            <div class="form-group">
+
+                <label for="documentFile">
+                    Upload Document
+                </label>
+
+                <input
+                    type="file"
+                    id="documentFile"
+                    name="documentFile"
+                    accept=".pdf,.jpg,.jpeg,.png">
+
+                <small>
+                    PDF, JPG, JPEG or PNG only
+                </small>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="add-button">
+
+                + Add Document
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= DOCUMENT LIST ================= -->
+
+    <section class="documents-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="small-title">
+                    MY DOCUMENTS
+                </p>
+
+                <h2>
+                    Saved Documents
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div id="documentList"
+             class="document-list">
+
+            <!-- Documents will appear here -->
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 LifeOS AI. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/document-vault.js"></script>
+
+
+</body>
+
+</html>

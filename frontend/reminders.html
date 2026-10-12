@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Reminder Center | LifeOS AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/reminders.css">
+
+    <link rel="stylesheet" href="css/reminder-game.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            LIFEOS AI
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="features.html">
+                Features
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN PAGE ================= -->
+
+    <main class="reminder-page">
+
+
+        <!-- ================= PAGE HEADING ================= -->
+
+        <section class="reminder-heading">
+
+            <h1>
+                Smart Reminder Center
+            </h1>
+
+            <p>
+                Never miss important tasks. LifeOS helps you
+                start early, stay motivated and complete them on time.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= ADD REMINDER ================= -->
+
+        <section class="add-reminder-card">
+
+            <div class="card-heading">
+
+                <h2>
+                    Add New Smart Reminder
+                </h2>
+
+                <p>
+                    Create a reminder and let LifeOS help you
+                    complete it before the deadline.
+                </p>
+
+            </div>
+
+
+
+            <form id="reminderForm">
+
+
+                <!-- REMINDER NAME -->
+
+                <div class="form-group">
+
+                    <label for="reminderName">
+                        Reminder Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reminderName"
+                        placeholder="Example: Complete LIFEOS AI Project"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Bill">
+                            Bill
+                        </option>
+
+                        <option value="Document">
+                            Document
+                        </option>
+
+                        <option value="Vehicle">
+                            Vehicle
+                        </option>
+
+                        <option value="Medicine">
+                            Medicine
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DUE DATE -->
+
+                <div class="form-group">
+
+                    <label for="reminderDate">
+                        Due Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="reminderDate"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DUE TIME -->
+
+                <div class="form-group">
+
+                    <label for="dueTime">
+                        Due Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="dueTime"
+                    >
+
+                </div>
+
+
+
+                <!-- ESTIMATED COMPLETION -->
+
+                <div class="form-group">
+
+                    <label for="estimatedCompletionDate">
+                        Estimated Completion Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="estimatedCompletionDate"
+                    >
+
+                </div>
+
+
+
+                <!-- EARLY REMINDER -->
+
+                <div class="form-group">
+
+                    <label for="earlyReminderDays">
+                        Start Reminder Before
+                    </label>
+
+                    <select id="earlyReminderDays">
+
+                        <option value="1">
+                            1 Day Before
+                        </option>
+
+                        <option value="3">
+                            3 Days Before
+                        </option>
+
+                        <option value="5">
+                            5 Days Before
+                        </option>
+
+                        <option value="7" selected>
+                            7 Days Before
+                        </option>
+
+                        <option value="14">
+                            14 Days Before
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ALARM -->
+
+                <div class="form-group">
+
+                    <label for="alarmEnabled">
+                        Reminder Alarm
+                    </label>
+
+                    <select id="alarmEnabled">
+
+                        <option value="true" selected>
+                            🔔 Enabled
+                        </option>
+
+                        <option value="false">
+                            🔕 Disabled
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- PRIORITY -->
+
+                <div class="form-group">
+
+                    <label for="priority">
+                        Priority
+                    </label>
+
+                    <select id="priority">
+
+                        <option value="High">
+                            High
+                        </option>
+
+                        <option value="Medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="add-button"
+                >
+                    + Add Smart Reminder
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ================= MY REMINDERS ================= -->
+
+        <section class="my-reminders-section">
+
+
+            <div class="reminders-heading">
+
+                <div>
+
+                    <h2>
+                        My Smart Reminders
+                    </h2>
+
+                    <p>
+                        Complete your tasks before the deadline.
+                    </p>
+
+                </div>
+
+
+                <span
+                    id="reminderCount"
+                    class="reminder-count"
+                >
+                    0 Reminders
+                </span>
+
+            </div>
+
+
+
+            <div
+                id="reminderList"
+                class="reminder-list"
+            >
+
+                <div class="loading-card">
+
+                    <h3>
+                        Loading reminders...
+                    </h3>
+
+                    <p>
+                        Please wait.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= LIFEOS GAMING ROADMAP ================= -->
+
+        <section class="lifeos-roadmap-section">
+
+
+            <div class="roadmap-header">
+
+                <div>
+
+                    <span class="roadmap-label">
+                        LIFEOS PRODUCTIVITY
+                    </span>
+
+                    <h2>
+                        🏆 Your Progress Roadmap
+                    </h2>
+
+                    <p>
+                        Complete challenges and reminders to earn Life Points.
+                    </p>
+
+                </div>
+
+
+                <div class="life-points-box">
+
+                    <span>
+                        ⭐
+                    </span>
+
+                    <strong id="lifePoints">
+                        0
+                    </strong>
+
+                    <small>
+                        Life Points
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="roadmap-track">
+
+
+                <div
+                    class="roadmap-step"
+                    id="roadmapStarted"
+                >
+
+                    <div class="roadmap-circle">
+                        🚀
+                    </div>
+
+                    <strong>
+                        Started
+                    </strong>
+
+                </div>
+
+
+
+                <div class="roadmap-line"></div>
+
+
+
+                <div
+                    class="roadmap-step"
+                    id="roadmapWorking"
+                >
+
+                    <div class="roadmap-circle">
+                        🔧
+                    </div>
+
+                    <strong>
+                        Working
+                    </strong>
+
+                </div>
+
+
+
+                <div class="roadmap-line"></div>
+
+
+
+                <div
+                    class="roadmap-step"
+                    id="roadmapAlmost"
+                >
+
+                    <div class="roadmap-circle">
+                        🔥
+                    </div>
+
+                    <strong>
+                        Almost Done
+                    </strong>
+
+                </div>
+
+
+
+                <div class="roadmap-line"></div>
+
+
+
+                <div
+                    class="roadmap-step"
+                    id="roadmapCompleted"
+                >
+
+                    <div class="roadmap-circle">
+                        🏆
+                    </div>
+
+                    <strong>
+                        Completed
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- ================= AI CHALLENGE MODAL ================= -->
+
+    <div
+        id="challengeModal"
+        class="challenge-modal"
+    >
+
+
+        <div class="challenge-card">
+
+
+            <button
+                type="button"
+                id="closeChallenge"
+                class="close-challenge"
+            >
+                ×
+            </button>
+
+
+
+            <!-- AI HEADER -->
+
+            <div class="challenge-ai-header">
+
+                <div class="challenge-ai-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <span>
+                        LIFEOS AI
+                    </span>
+
+                    <h2>
+                        Your Next Mission
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TASK -->
+
+            <div class="challenge-task-box">
+
+                <span>
+                    CURRENT TASK
+                </span>
+
+                <h3 id="challengeTask">
+                    Your task
+                </h3>
+
+            </div>
+
+
+
+            <!-- MOTIVATION -->
+
+            <div class="motivation-box">
+
+                <span>
+                    💬 AI MOTIVATION
+                </span>
+
+                <p id="motivationText">
+                    Let's make the first step easy.
+                </p>
+
+            </div>
+
+
+
+            <!-- CHALLENGE -->
+
+            <div class="mini-challenge-box">
+
+                <span>
+                    🎯 5-MINUTE CHALLENGE
+                </span>
+
+                <p id="challengeText">
+                    Start with one small step.
+                </p>
+
+            </div>
+
+
+
+            <!-- TIMER -->
+
+            <div
+                id="timerSection"
+                class="timer-section"
+            >
+
+                <div class="timer-label">
+                    FOCUS TIMER
+                </div>
+
+                <div
+                    id="challengeTimer"
+                    class="challenge-timer"
+                >
+                    05:00
+                </div>
+
+
+                <div class="timer-progress">
+
+                    <div
+                        id="timerProgressBar"
+                        class="timer-progress-bar"
+                    ></div>
+
+                </div>
+
+
+                <div class="timer-buttons">
+
+                    <button
+                        type="button"
+                        id="startTimerButton"
+                        class="start-timer-button"
+                    >
+                        ▶ Start Challenge
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="resetTimerButton"
+                        class="reset-timer-button"
+                    >
+                        ↻ Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLETE -->
+
+            <div
+                id="challengeCompleteBox"
+                class="challenge-complete-box"
+            >
+
+                <div class="complete-animation">
+                    🎉
+                </div>
+
+                <h2>
+                    Challenge Complete!
+                </h2>
+
+                <p>
+                    You completed your 5-minute mission.
+                </p>
+
+                <strong>
+                    ⭐ +20 Life Points
+                </strong>
+
+                <button
+                    type="button"
+                    id="finishChallengeButton"
+                >
+                    Continue
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        © 2026 LifeOS AI. All Rights Reserved.
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/reminders.js"></script>
+
+</body>
+
+</html>

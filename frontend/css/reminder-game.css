@@ -1,0 +1,784 @@
+/* =========================================================
+   LIFEOS AI - SMART REMINDER GAMIFICATION
+   ========================================================= */
+
+
+/* =========================================================
+   ROADMAP
+   ========================================================= */
+
+.lifeos-roadmap-section {
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+
+}
+
+
+.roadmap-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.roadmap-label {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #a16207;
+
+}
+
+
+.roadmap-header h2 {
+
+    margin: 7px 0;
+
+    color: #0f172a;
+
+}
+
+
+.roadmap-header p {
+
+    margin: 0;
+
+    color: #64748b;
+
+}
+
+
+.life-points-box {
+
+    min-width: 150px;
+
+    padding: 15px 20px;
+
+    border-radius: 16px;
+
+    background: #fffbeb;
+
+    border: 1px solid #e7d58a;
+
+    text-align: center;
+
+}
+
+
+.life-points-box span {
+
+    font-size: 22px;
+
+}
+
+
+.life-points-box strong {
+
+    display: block;
+
+    font-size: 28px;
+
+    color: #a16207;
+
+}
+
+
+.life-points-box small {
+
+    color: #64748b;
+
+}
+
+
+.roadmap-track {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+}
+
+
+.roadmap-step {
+
+    text-align: center;
+
+    min-width: 110px;
+
+    opacity: 0.45;
+
+    transition: 0.3s ease;
+
+}
+
+
+.roadmap-step.active {
+
+    opacity: 1;
+
+    transform: translateY(-4px);
+
+}
+
+
+.roadmap-circle {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f1f5f9;
+
+    border: 2px solid #cbd5e1;
+
+    font-size: 23px;
+
+}
+
+
+.roadmap-step.active .roadmap-circle {
+
+    background: #fef3c7;
+
+    border-color: #f4c430;
+
+    box-shadow: 0 0 20px rgba(244, 196, 48, 0.25);
+
+}
+
+
+.roadmap-step strong {
+
+    display: block;
+
+    margin-top: 9px;
+
+    font-size: 13px;
+
+    color: #475569;
+
+}
+
+
+.roadmap-line {
+
+    flex: 1;
+
+    height: 3px;
+
+    background: #e2e8f0;
+
+}
+
+
+.roadmap-line.active {
+
+    background: #f4c430;
+
+}
+
+
+
+/* =========================================================
+   AI MOTIVATION BUTTON
+   ========================================================= */
+
+.motivation-btn {
+
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 10px;
+
+    background: #0f172a;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.motivation-btn:hover {
+
+    background: #a16207;
+
+    transform: translateY(-1px);
+
+}
+
+
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.countdown-text {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #a16207;
+
+}
+
+
+
+/* =========================================================
+   CHALLENGE MODAL
+   ========================================================= */
+
+.challenge-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.72);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9999;
+
+}
+
+
+.challenge-modal.show {
+
+    display: flex;
+
+}
+
+
+.challenge-card {
+
+    width: min(650px, 100%);
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+
+    animation: challengeAppear 0.3s ease;
+
+}
+
+
+@keyframes challengeAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px) scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+.close-challenge {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 15px;
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+.challenge-ai-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-right: 35px;
+
+}
+
+
+.challenge-ai-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fffbeb;
+
+    border: 1px solid #e7d58a;
+
+    font-size: 27px;
+
+}
+
+
+.challenge-ai-header span {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #a16207;
+
+}
+
+
+.challenge-ai-header h2 {
+
+    margin: 3px 0 0;
+
+    color: #0f172a;
+
+}
+
+
+
+/* =========================================================
+   TASK BOX
+   ========================================================= */
+
+.challenge-task-box {
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+}
+
+
+.challenge-task-box span,
+.motivation-box span,
+.mini-challenge-box span {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    color: #64748b;
+
+}
+
+
+.challenge-task-box h3 {
+
+    margin: 8px 0 0;
+
+    color: #0f172a;
+
+}
+
+
+
+/* =========================================================
+   MOTIVATION
+   ========================================================= */
+
+.motivation-box {
+
+    margin-top: 14px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #f4c430;
+
+}
+
+
+.motivation-box p {
+
+    margin: 8px 0 0;
+
+    line-height: 1.6;
+
+    color: #334155;
+
+}
+
+
+
+/* =========================================================
+   MINI CHALLENGE
+   ========================================================= */
+
+.mini-challenge-box {
+
+    margin-top: 14px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #fffbeb;
+
+    border: 1px solid #e7d58a;
+
+}
+
+
+.mini-challenge-box p {
+
+    margin: 10px 0 0;
+
+    line-height: 1.6;
+
+    color: #334155;
+
+}
+
+
+
+/* =========================================================
+   TIMER
+   ========================================================= */
+
+.timer-section {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: #0f172a;
+
+}
+
+
+.timer-label {
+
+    color: #cbd5e1;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.challenge-timer {
+
+    margin: 10px 0;
+
+    font-size: 58px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #f4c430;
+
+}
+
+
+.timer-progress {
+
+    height: 8px;
+
+    background: #334155;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.timer-progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #f4c430;
+
+    transition: width 1s linear;
+
+}
+
+
+.timer-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+.start-timer-button,
+.reset-timer-button {
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+.start-timer-button {
+
+    background: #f4c430;
+
+    color: #0f172a;
+
+}
+
+
+.reset-timer-button {
+
+    background: #334155;
+
+    color: white;
+
+}
+
+
+
+/* =========================================================
+   COMPLETE
+   ========================================================= */
+
+.challenge-complete-box {
+
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background: #fffbeb;
+
+    border: 1px solid #e7d58a;
+
+}
+
+
+.challenge-complete-box.show {
+
+    display: block;
+
+}
+
+
+.complete-animation {
+
+    font-size: 48px;
+
+}
+
+
+.challenge-complete-box h2 {
+
+    color: #0f172a;
+
+}
+
+
+.challenge-complete-box p {
+
+    color: #64748b;
+
+}
+
+
+.challenge-complete-box strong {
+
+    display: block;
+
+    margin: 15px 0;
+
+    font-size: 22px;
+
+    color: #a16207;
+
+}
+
+
+.challenge-complete-box button {
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    background: #0f172a;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .roadmap-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .roadmap-track {
+
+        overflow-x: auto;
+
+        padding-bottom: 10px;
+
+    }
+
+
+    .roadmap-step {
+
+        min-width: 100px;
+
+    }
+
+
+    .challenge-card {
+
+        padding: 22px;
+
+    }
+
+
+    .challenge-timer {
+
+        font-size: 46px;
+
+    }
+
+}

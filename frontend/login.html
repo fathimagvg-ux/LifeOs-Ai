@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - LifeOS AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            LifeOS <span>AI</span>
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="features.html">
+                Features
+            </a>
+
+            <a href="login.html" class="active">
+                Login
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <main class="auth-page">
+
+
+        <div class="auth-card">
+
+
+            <!-- LOGIN ICON -->
+
+            <div class="auth-icon">
+                🔐
+            </div>
+
+
+            <!-- TITLE -->
+
+            <p class="small-title">
+                LIFEOS AI
+            </p>
+
+
+            <h1>
+                Welcome Back
+            </h1>
+
+
+            <p class="auth-subtitle">
+                Login to manage your life smarter with AI.
+            </p>
+
+
+
+            <!-- ================= LOGIN FORM ================= -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="auth-button">
+
+                    Login
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- REGISTER -->
+
+            <p class="auth-footer">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 LifeOS AI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= LOGIN SCRIPT ================= -->
+
+    <script>
+
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                // Temporary frontend login
+                // Later MongoDB authentication
+                // will be connected here.
+
+                window.location.href = "dashboard.html";
+
+            });
+
+    </script>
+<script src="js/login.js"></script>
+
+</body>
+
+</html>
